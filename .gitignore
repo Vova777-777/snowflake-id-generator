@@ -1,0 +1,45 @@
+
+# ----------------------
+# 1. Сборка (Gradle)
+# ----------------------
+build/
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+# Если вы не коммитите gradle wrapper (но лучше коммитить)
+# gradlew
+# gradlew.bat
+# gradle/wrapper/
+
+# ----------------------
+# 2. IDE (IntelliJ IDEA)
+# ----------------------
+.idea/
+*.iml
+out/
+target/
+.ipr
+.iws
+
+# ----------------------
+# 3. Kotlin
+# ----------------------
+*.class
+*.kt.bak
+.kotlin/
+kotlin-js-store/
+
+
+# ----------------------
+# 6. Операционные системы
+# ----------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ----------------------
+# 7. Зависимости (если локальные)
+# ----------------------
+libs/

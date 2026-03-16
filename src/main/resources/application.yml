@@ -20,7 +20,7 @@ management:
       show-details: always
       show-components: always
   health:
-    livenessstate:
+    livenessState:
       enabled: true
-    readinessstate:
+    readinessState:
       enabled: true

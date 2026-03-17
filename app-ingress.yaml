@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: snowflake-id-generator-ingress
+  annotations:
+    kubernetes.io/ingress.class: contour
+spec:
+  rules:
+    - host: snowflake.dev.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: snowflake-id-generator-service
+                port:
+                  number: 80

@@ -5,6 +5,10 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: contour
 spec:
+  tls:
+    - hosts:
+        - snowflake.dev.local
+      secretName: app-tls-secret
   rules:
     - host: snowflake.dev.local
       http:

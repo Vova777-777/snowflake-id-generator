@@ -16,6 +16,22 @@ spec:
         - image: snowflake-id-generator:latest
           imagePullPolicy: IfNotPresent
           name: snowflake-id-generator
+          env:
+            - name: SPRING_APPLICATION_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: spring.application.name
+            - name: SNOWFLAKE_SETTINGS_STARTING_EPOCH
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key:  snowflake-settings.starting-epoch
+            - name: SNOWFLAKE_SETTINGS_DATACENTER_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: snowflake-settings.datacenter-id
           ports:
             - containerPort: 8080
               name: http

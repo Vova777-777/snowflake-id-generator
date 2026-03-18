@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  labels:
+    app: snowflake-id-generator
+data:
+  spring.application.name: "snowflake-id-generator"
+  snowflake-settings.starting-epoch: "999999999"
+  snowflake-settings.datacenter-id: "5"
